@@ -9,6 +9,7 @@ resource "helm_release" "spring-mongo" {
   ]
 }
 
+#
 
 
 /*1. Get the application URL by running these commands:
