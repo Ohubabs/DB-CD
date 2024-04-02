@@ -1,4 +1,4 @@
-resource "helm_release" "mongodb" {
+/*resource "helm_release" "mongodb" {
   name       = "mongodb"
   #create_namespace = true
   namespace  = "konoha" #konoha
@@ -18,7 +18,7 @@ resource "kubernetes_storage_class" "mongo-sc" {
   parameters = {
     type = "gp2"
   }
-}
+}*/
 
 #test nodeselector with label db=mongo for springapp setup
 #pracrice setting up mongo secret so as not to hard code in helm chart and 
