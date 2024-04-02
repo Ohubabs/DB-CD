@@ -7,7 +7,7 @@ pipeline{
             //steps{
                 //sh "echo cloning code"
                 //sh "echo clone code complete"
-                //git 'https://github.com/Ohubabs/terra_mattermost.git'
+                //git 'https://github.com/Konoha-23/springapp-mongo.git
             //}
         //}
         stage('Initialize Terraform Environment'){
