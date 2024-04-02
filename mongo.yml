@@ -514,7 +514,8 @@ affinity: {}
 ## @param nodeSelector MongoDB(&reg;) Node labels for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
 ##
-nodeSelector: {}
+nodeSelector: 
+  db: mongo
 ## @param tolerations MongoDB(&reg;) Tolerations for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
 ##
