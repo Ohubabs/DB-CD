@@ -30,7 +30,7 @@ pipeline{
         }
         stage('Deploy konoha.devopsnetwork.net'){
             steps{
-              sh "echo 'Create Wordpress'"
+              sh "echo 'Create konoha.devopsnetwork.net'"
               sh "terraform apply --auto-approve"   
             }
         }
