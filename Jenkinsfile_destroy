@@ -1,0 +1,32 @@
+pipeline{
+    agent { 
+        label 'kubernetes'
+  }
+    stages{
+        //stage('Clone Code'){
+            //steps{
+                //sh "echo cloning code"
+                //sh "echo clone code complete"
+                //git 'https://github.com/Konoha-23/springapp-mongo.git
+            //}
+        //}
+        stage('Initialize Terraform Environment'){
+            steps{
+              sh "echo 'Initialize Terraform'"
+              sh "terraform init"   
+            }
+        }
+        stage('Terraform Plan for resources'){
+            steps{
+              sh "echo 'Set the Plan for networking cluster resources to be created'"
+              sh "terraform plan"   
+            }
+        }
+        stage('Destroy konoha.devopsnetwork.net'){
+            steps{
+              sh "echo 'Create konoha.devopsnetwork.net'"
+              sh "terraform destroy --auto-approve"   
+            }
+        }
+    }
+}
