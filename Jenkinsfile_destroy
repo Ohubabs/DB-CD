@@ -10,22 +10,15 @@ pipeline{
                 //git 'https://github.com/Konoha-23/springapp-mongo.git
             //}
         //}
-        stage('Initialize Terraform Environment'){
+        stage('Destroy konoha Website'){
             steps{
-              sh "echo 'Initialize Terraform'"
-              sh "terraform init"   
-            }
-        }
-        stage('Terraform Plan for resources'){
-            steps{
-              sh "echo 'Set the Plan for networking cluster resources to be created'"
-              sh "terraform plan"   
-            }
-        }
-        stage('Destroy konoha.devopsnetwork.net'){
-            steps{
-              sh "echo 'Create konoha.devopsnetwork.net'"
-              sh "terraform destroy --auto-approve"   
+              withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                sh "echo 'Destroy konoha Website'"
+                sh "terraform init"
+                sh "terraform validate"
+                sh "terraform plan"
+                sh "terraform apply --auto-approve"
+                }
             }
         }
     }
