@@ -90,14 +90,14 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /
-    port: 8080
-readinessProbe:
-  httpGet:
-    path: /
-    port: 8080
+#livenessProbe:
+#  httpGet:
+#    path: /
+#    port: 8080
+#readinessProbe:
+#  httpGet:
+#    path: /
+#    port: 8080
 
 #1. Get the application URL by running these commands:
 #  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=spring-mongo,app.kubernetes.io/instance=spring-mongo" -o jsonpath="{.items[0].metadata.name}")
