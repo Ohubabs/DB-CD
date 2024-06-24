@@ -5,5 +5,5 @@ variable "krillin" {
 
 variable "destructodisk" {
     description = "Password for springapp mongo db access"
-    default = "destructodisk" 
+    default = "" 
 }
