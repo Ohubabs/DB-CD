@@ -135,7 +135,7 @@ affinity: {}
 #Mongo DB credentials
 
 #Enter the name for an existing mongo secret
-mongodbsecretName: springapp-mongodb-auth
+mongodbsecretName: krillin
 
 #Enter the name for an existing secret key for mongo root user 
 mongodbrootuserkey: MONGO_DB_USERNAME
