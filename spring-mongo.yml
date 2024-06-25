@@ -17,7 +17,7 @@ strategy:
      maxUnavailable: 1
 
 image:
-  repository: arsenalspringapp #princebabs/springapp 
+  repository: princebabs/arsenalspringapp #princebabs/springapp 
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1" #v2 
