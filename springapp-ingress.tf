@@ -6,17 +6,17 @@ resource "kubernetes_ingress_v1" "springapp-ingress" {
     name = "springapp"
     namespace = "springapp"
     annotations = {
-        "cert-manager.io/cluster-issuer" = "springapp-issuer"
+        "cert-manager.io/cluster-issuer" = "arsenalspring-issuer"
   }
   }
   spec {
     ingress_class_name = "nginx"
     tls {
       secret_name = "springapp-secret"
-      hosts = ["javaspringmongo.devopsnetwork.net"] 
+      hosts = ["arsenalspring.devopsnetwork.net"] 
     }
     rule {
-      host = "javaspringmongo.devopsnetwork.net"  
+      host = "arsenalspring.devopsnetwork.net"  
       http {
         path {
           path = "/"
