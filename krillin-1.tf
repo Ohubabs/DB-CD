@@ -1,6 +1,6 @@
-resource "kubernetes_secret_v1" "krillin-1 { #do not name krillin so it won't crash with the secret for mongodb
+resource "kubernetes_secret_v1" "krillin-1" { #do not name krillin so it won't crash with the secret for mongodb
   metadata {
-    name = "springappsecret"
+    name = "krillin-1"
     namespace = "springapp" 
   }
 
