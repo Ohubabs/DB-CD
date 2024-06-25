@@ -1,6 +1,6 @@
-resource "kubernetes_secret_v1" "krillin-1" { #do not name krillin so it won't crash with the secret for mongodb
+resource "kubernetes_secret_v1" "springapp-mongodb-auth" { #do not name krillin so it won't crash with the secret for mongodb
   metadata {
-    name = "krillin-1"
+    name = "springapp-mongodb-auth"
     namespace = "springapp" 
   }
 
@@ -9,3 +9,4 @@ resource "kubernetes_secret_v1" "krillin-1" { #do not name krillin so it won't c
     MONGO_DB_PASSWORD = var.destructodisk
   }
 }
+
