@@ -17,11 +17,10 @@ strategy:
      maxUnavailable: 1
 
 image:
-  repository: princebabs/springapp #mylandmarktech/spring-boot-mongo
+  repository: arsenalspringapp #princebabs/springapp 
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v2" #"latest"
-
+  tag: "v1" #v2 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
