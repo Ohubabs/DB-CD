@@ -23,10 +23,10 @@ provider "aws" {
 
 provider "helm" {
   kubernetes {
-    config_path = "/home/eks/.kube/config" #changed user needed to correspond with production cluster deploying applications.
+    config_path = "/home/terra/.kube/config" #changed user needed to correspond with production cluster deploying applications.
   }
 }
 
 provider "kubernetes" {
-    config_path = "/home/eks/.kube/config"
+    config_path = "/home/terra/.kube/config"
   }
