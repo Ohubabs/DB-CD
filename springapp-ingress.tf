@@ -24,7 +24,7 @@ resource "kubernetes_ingress_v1" "springapp-ingress" {
             service {
               name = "springapp-mongo-spring-mongo" 
               port {
-                number = 80 
+                number = 8080 
               }
             }
           }
