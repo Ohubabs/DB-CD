@@ -9,10 +9,10 @@ pipeline{
                 sh "kubectl apply -f springapp-issuer.yml"
             }
         }
-        stage('Deploy javaspringmongo.devopsnetwork.net'){
+        stage('Deploy arsenalspring.devopsnetwork.net'){
             steps{
               withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-              sh "echo 'Create javaspringmongo.devopsnetwork.net'"
+              sh "echo 'Create arsenalspring.devopsnetwork.net'"
               sh "terraform init"
               sh "terraform validate"
               sh "terraform plan"
