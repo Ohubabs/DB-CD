@@ -24,7 +24,7 @@ pipeline{
             steps{
               withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                 sh "echo 'Show arsenal java springapp container running on fargate nodes'"
-                sh "kubectl get po -o wide -n pipeline"
+                sh "kubectl get po -o wide -n springapp"
               }
             }
         }
