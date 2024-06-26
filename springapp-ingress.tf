@@ -22,7 +22,7 @@ resource "kubernetes_ingress_v1" "springapp-ingress" {
           path = "/"
           backend {
             service {
-              name = "springapp-mongo-spring-mongo" 
+              name = "springapp-spring-mongo" 
               port {
                 number = 8080 
               }
