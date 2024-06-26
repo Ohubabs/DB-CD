@@ -10,10 +10,10 @@ pipeline{
                 //git 'https://github.com/Konoha-23/springapp-mongo.git
             //}
         //}
-        stage('Destroy javaspringmongo.devopsnetwork.net Website'){
+        stage('Destroy arsenalspring.devopsnetwork.net Website'){
             steps{
               withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                sh "echo 'Destroy javaspringmongo.devopsnetwork.net Website'"
+                sh "echo 'Destroy arsenalspring.devopsnetwork.net Website'"
                 sh "terraform init"
                 sh "terraform validate"
                 sh "terraform plan"
