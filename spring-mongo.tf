@@ -1,6 +1,6 @@
 resource "helm_release" "spring-mongo" {
   name       = "springapp"
-  #create_namespace = true
+  create_namespace = true
   namespace  = "springapp" 
   repository = "https://konoha-23.github.io/springapp-mongo/"
   chart      = "spring-mongo"
