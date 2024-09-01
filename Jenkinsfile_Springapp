@@ -1,0 +1,32 @@
+pipeline{
+    agent { 
+        label 'kubernetes'
+  }
+    stages{
+        stage('Provision springapp-issuer to acquire a certificate to secure the arsenalspring.devopsnetwork.net'){
+            steps{
+                sh "echo cloning code"
+                sh "kubectl apply -f springapp-issuer.yml"
+            }
+        }
+        stage('Deploy arsenalspring.devopsnetwork.net'){
+            steps{
+              withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+              sh "echo 'Create arsenalspring.devopsnetwork.net'"
+              sh "terraform init"
+              sh "terraform validate"
+              sh "terraform plan"
+              sh "terraform apply --auto-approve"
+              }
+            }
+        }
+        stage('Show Arsenal Java Springapp Running on Fargate Node'){
+            steps{
+              withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_cred', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                sh "echo 'Show arsenal java springapp container running on fargate nodes'"
+                sh "kubectl get po -o wide -n springapp"
+              }
+            }
+        }
+    }
+}
