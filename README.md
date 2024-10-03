@@ -29,9 +29,8 @@ For this project, you are to setup a pipeline to deploy a stateless Java Springb
 
 ![Screenshot 2024-06-25 at 7 10 13 PM](https://github.com/user-attachments/assets/4f8aa4f2-5344-4936-8996-3b231837189d)
 
-![Screenshot 2024-06-25 at 7 16 13 PM](https://github.com/user-attachments/assets/5873cb10-d79f-43be-a049-b46bd07f3f0f)
+![Screenshot 2024-06-25 at 7 24 43 PM](https://github.com/user-attachments/assets/abba8171-359e-4c1a-ae42-5af367d27c72)
 
-![Screenshot 2024-06-24 at 6 39 06 PM](https://github.com/user-attachments/assets/538afb7d-f3a6-43ad-a760-9fd1955734cf)
 
 ![Screenshot 2024-06-25 at 6 42 42 PM](https://github.com/user-attachments/assets/b37090d8-78f5-4ce0-a12b-bfe7127e1006)
 
