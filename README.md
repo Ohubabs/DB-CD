@@ -11,6 +11,9 @@ For this project, you are to setup a pipeline to deploy a stateless Java Springb
 ![Screenshot 2024-06-24 at 3 04 32 PM](https://github.com/user-attachments/assets/718a3ff0-fa52-4eab-a937-3c7dc8997c6c)
 
 ### Step 2: Go to “Configuration”, Select “Poll SCM” and Enter the details for your GitHub repo & Jenkinsfile or copy and paste the Jenkinsfile in this repo.
+
+![image](https://github.com/user-attachments/assets/e74fe561-2e4b-42b3-8843-e2d8446692a0)
+
 ### Step 3: Click “Build now” to run your pipeline with Maven, SonarQube, and Docker to Build, Test, Containerize and Push your Java Springboot Web app to DockerHub.
 
 ![Screenshot 2024-06-24 at 6 27 18 PM](https://github.com/user-attachments/assets/24e6bbd6-5375-479a-8718-76b1d41e081e)
