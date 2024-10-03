@@ -4,7 +4,7 @@
 
 ## Project Objective
 
-For this project, you are to setup a pipeline to deploy a stateless Java Springboot app connected to mongodb nosql database into the DB cluster running on a Fargate node.
+For this project, you are to setup a pipeline to deploy a stateless Java Springboot app connected to mongodb nosql database into the DB cluster running on a Fargate node using Terraform with the Kubernetes and Helm Providers.
 
 ### Step 1: Go to New Item” from the Dashboard, select “Pipeline”, name it “Springapp”.
 
