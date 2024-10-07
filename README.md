@@ -4,14 +4,14 @@
 
 ## Project Objective
 
-For this project, you are to setup a pipeline to deploy a stateless Java Springboot app connected to mongodb nosql database into the DB cluster running on a Fargate node using Terraform with the Kubernetes and Helm Providers.
+For this project, set up a pipeline to deploy a stateless Java Springboot app connected to MongoDB NoSQL database into the DB cluster running on a Fargate node using Terraform with the Kubernetes and Helm Providers.
 
 ## Prerequisites
 
 - MongoDB deployed in DB Cluster (To set MongoDB in the DB cluster, check Project part 5: https://github.com/Ohubabs/DB-Mongo.git).
 - Prior knowledge of Terraform, Kubernetes, and Helm, application deployment, charts.
 
-### Step 1: Go to New Item” from the Dashboard, select “Pipeline”, name it “Springapp”.
+### Step 1: Go to New Item” from the Dashboard, select “Pipeline”, and name it “Springapp”.
 
 ![Screenshot 2024-06-24 at 3 04 32 PM](https://github.com/user-attachments/assets/718a3ff0-fa52-4eab-a937-3c7dc8997c6c)
 
@@ -23,8 +23,9 @@ For this project, you are to setup a pipeline to deploy a stateless Java Springb
 
 - To enter details for your MongoDB database, edit the var.tf file to fill in the secret in the krillin.tf file.
 - If you change the name for the secret with your MongoDB credentials, you must also change it in the values file for the customized helm chart via the spring-mongo.yml file.
+- To expose your application with SSL encryption to the internet, you must edit the spring-issuer.yml file with your email, custom URLs for your site with your AWS registered domain name, and your AWS hosted zone ID. In addition, you will need your AWS credentials, which were saved in a secret made during Project Part 1 (ref: https://github.com/Ohubabs/DB-Pipeline.git)
 
-### Step 3: Click “Build now” to run your pipeline with Maven, SonarQube, and Docker to Build, Test, Containerize and Push your Java Springboot Web app to DockerHub.
+### Step 3: Click “Build now” to run your pipeline with Maven, SonarQube, and Docker to Build, Test, Containerize, and Push your Java Springboot Web app to DockerHub.
 
 ![Screenshot 2024-06-24 at 6 27 18 PM](https://github.com/user-attachments/assets/24e6bbd6-5375-479a-8718-76b1d41e081e)
 
