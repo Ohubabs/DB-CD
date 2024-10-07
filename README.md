@@ -6,6 +6,11 @@
 
 For this project, you are to setup a pipeline to deploy a stateless Java Springboot app connected to mongodb nosql database into the DB cluster running on a Fargate node using Terraform with the Kubernetes and Helm Providers.
 
+## Prerequisites
+
+- MongoDB deployed in DB Cluster (To set MongoDB in the DB cluster, check Project part 5: https://github.com/Ohubabs/DB-Mongo.git).
+- Prior knowledge of Terraform, Kubernetes, and Helm, application deployment, charts.
+
 ### Step 1: Go to New Item” from the Dashboard, select “Pipeline”, name it “Springapp”.
 
 ![Screenshot 2024-06-24 at 3 04 32 PM](https://github.com/user-attachments/assets/718a3ff0-fa52-4eab-a937-3c7dc8997c6c)
