@@ -19,6 +19,11 @@ For this project, you are to setup a pipeline to deploy a stateless Java Springb
 
 ![image](https://github.com/user-attachments/assets/e74fe561-2e4b-42b3-8843-e2d8446692a0)
 
+#### Notes: -
+
+- To enter details for your MongoDB database, edit the var.tf file to fill in the secret in the krillin.tf file.
+- If you change the name for the secret with your MongoDB credentials, you must also change it in the values file for the customized helm chart via the spring-mongo.yml file.
+
 ### Step 3: Click “Build now” to run your pipeline with Maven, SonarQube, and Docker to Build, Test, Containerize and Push your Java Springboot Web app to DockerHub.
 
 ![Screenshot 2024-06-24 at 6 27 18 PM](https://github.com/user-attachments/assets/24e6bbd6-5375-479a-8718-76b1d41e081e)
